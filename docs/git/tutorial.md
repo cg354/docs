@@ -40,7 +40,7 @@
 
 Overview:
 
-     1. Open your browser, navigate to https://github.com/your_user_name/HW
+     1. Open your browser, navigate to https://github.com/your_user_name/Repository_Name
 
      2. Click on "Pull Requests" in the right hand bar
 
