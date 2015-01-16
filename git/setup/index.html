@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Commands - Complete Guide to IBS574</title>
+  <title>Setup - Complete Guide to IBS574</title>
   
 
   
@@ -61,38 +61,20 @@
         
             <span>Git</span>
             
-                <li class="toctree-l2 ">
-                    <a class="" href="../setup">Setup</a>
-                    
-                </li>
-            
                 <li class="toctree-l2 current">
-                    <a class="current" href=".">Commands</a>
+                    <a class="current" href=".">Setup</a>
                     
                         <ul>
                         
-                            <li class="toctree-l3"><a href="#git-commands">Git Commands</a></li>
-                            
-                                <li><a class="toctree-l4" href="#clone-cd-into-the-repository-folder">clone &amp; cd into the repository folder</a></li>
-                            
-                                <li><a class="toctree-l4" href="#status">status</a></li>
-                            
-                                <li><a class="toctree-l4" href="#pull">pull</a></li>
-                            
-                                <li><a class="toctree-l4" href="#add">add</a></li>
-                            
-                                <li><a class="toctree-l4" href="#rm">rm</a></li>
-                            
-                                <li><a class="toctree-l4" href="#commit">commit</a></li>
-                            
-                                <li><a class="toctree-l4" href="#push">push</a></li>
-                            
-                                <li><a class="toctree-l4" href="#git-config">git config</a></li>
-                            
-                                <li><a class="toctree-l4" href="#using-ssh-keys-to-log-into-github">Using SSH keys to log into GitHub</a></li>
+                            <li class="toctree-l3"><a href="#git-setup-instructions">Git Setup Instructions</a></li>
                             
                         
                         </ul>
+                    
+                </li>
+            
+                <li class="toctree-l2 ">
+                    <a class="" href="../commands">Commands</a>
                     
                 </li>
             
@@ -129,7 +111,7 @@
           <div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="../..">Docs</a> &raquo;</li>
-    <li>Commands</li>
+    <li>Setup</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -142,44 +124,16 @@
 </div>
           <div role="main">
             <div class="section">
-              <h1 id="git-commands">Git Commands</h1>
-<p>Work in progress!</p>
-<p><strong><a href="https://confluence.atlassian.com/display/STASH/Basic+Git+commands">Git Commands</a></strong></p>
-<pre><code> must know "git clone", "git status", "git add", "git commit", "git push" only
-</code></pre>
-<h2 id="clone-cd-into-the-repository-folder">clone &amp; cd into the repository folder</h2>
-<p><em>(make a local copy of the GitHub repository)</em></p>
-<pre><code>git clone some_repo some_folder_path ; cd some_folder_path
-</code></pre>
-<h2 id="status">status</h2>
-<p><em>(check the current state of your local repository)</em></p>
-<pre><code>git status
-</code></pre>
-<h2 id="pull">pull</h2>
-<p><em>(get latest files from the repository sitting on GitHub.com)</em></p>
-<pre><code>git pull
-</code></pre>
-<h2 id="add">add</h2>
-<p><em>(start tracking a file)</em></p>
-<pre><code>git add some_file
-</code></pre>
-<h2 id="rm">rm</h2>
-<p><em>(stop tracking a file)</em></p>
-<pre><code>git rm some_file
-</code></pre>
-<h2 id="commit">commit</h2>
-<p><em>(record some changes on your local machine)</em></p>
-<pre><code>git commit some_file -m 'your message here!'
-</code></pre>
-<h2 id="push">push</h2>
-<p><em>(update the GitHub repository with your locally commit'ed changes)</em></p>
-<pre><code>git push
-</code></pre>
-<h2 id="git-config">git config</h2>
-<p>Allows you set default author name, email and your favorite text editor.</p>
-<h2 id="using-ssh-keys-to-log-into-github">Using SSH keys to log into GitHub</h2>
-<p>Really awesome way to avoid having to type in username and password everytime
-you clone or commit.</p>
+              <h1 id="git-setup-instructions"><strong>Git Setup Instructions</strong></h1>
+<p>This is only needed if you wish to install GIT on your own computer.</p>
+<p>You can choose to use git on cc3-eigc.emory.edu instead (by ssh'ing into the server). </p>
+<p><strong><a href="http://blog.davidegrayson.com/2013/04/git-and-putty-in-windows.html?m=1">Windows</a></strong>
+- use the <strong>"Advanced context menu (git-cheetah-plugin)</strong> option (In the Select Components setup portion)
+    - The git-cheetah-plugin option will provide you some neat menu items, when you right click on items in your git repository when using Windows Explorer GUI.
+- use the <strong>"Use Git Bash only option</strong> (in the "Adjusting Your PATH Environment" setup section)
+- use the <strong>"Checkout Windows-style, comment Unix-style line endings"</strong> (in the "Configuring the line ending conversions" section)
+- if using Putty: use the <strong>"Use (Tortoise)Plink"</strong> option (in "Choosing the SSH executable" section)*</p>
+<p><strong><a href="https://help.github.com/articles/set-up-git/">Mac </a></strong></p>
 
             </div>
           </div>
@@ -187,10 +141,10 @@ you clone or commit.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../pull-requests" class="btn btn-neutral float-right" title="Pull Requests"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../commands" class="btn btn-neutral float-right" title="Commands"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../setup" class="btn btn-neutral" title="Setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../setup" class="btn btn-neutral" title="Getting Setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -218,8 +172,8 @@ you clone or commit.</p>
         
             <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
         
-      <span><a href="../setup" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../pull-requests" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../setup" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../commands" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 </body>
