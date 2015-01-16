@@ -1,0 +1,8 @@
+site_name: IBS574 - Docs
+site_favicon: favicon.ico
+repo_url: https://github.com/IBS574/docs
+pages:
+    - [index.md, 'Home']
+    - [git.md, 'Git']
+theme: readthedocs
+theme_dir: 'custom_theme'
