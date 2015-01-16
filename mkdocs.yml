@@ -2,6 +2,7 @@ site_name: Complete Guide to IBS574
 repo_url: https://github.com/IBS574/docs
 pages:
     - [index.md, 'Home']
+    - [setup.md, 'Getting Setup']
     - [git/commands.md, 'Git', 'Commands']
     - [git/tutorial.md, 'Git', 'Tutorials']
 theme: readthedocs
