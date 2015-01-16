@@ -3,10 +3,11 @@ repo_url: https://github.com/IBS574/docs
 pages:
     - [index.md, 'Home']
     - [setup.md, 'Getting Setup']
-    - [unix/commands.md, 'Unix', 'Commands']
+#    - [unix/commands.md, 'Unix', 'Commands']
     - [git/commands.md, 'Git', 'Commands']
+    - [git/pull-requests.md, 'Git', 'Pull Requests']
     - [git/tutorial.md, 'Git', 'Tutorials']
-    - [python/intro.md, 'Python', 'Introduction']
-    - [python/examples.md, 'Python', 'Examples']
+#    - [python/intro.md, 'Python', 'Introduction']
+#    - [python/examples.md, 'Python', 'Examples']
 theme: readthedocs
 theme_dir: 'custom_theme'
