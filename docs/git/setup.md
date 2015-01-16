@@ -1,5 +1,9 @@
 # **Git Setup Instructions**
 
+This is only needed if you wish to install GIT on your own computer.
+
+You can choose to use git on cc3-eigc.emory.edu instead (by ssh'ing into the server). 
+
 **[Windows](http://blog.davidegrayson.com/2013/04/git-and-putty-in-windows.html?m=1)**
 - use the **"Advanced context menu (git-cheetah-plugin)** option (In the Select Components setup portion)
     - The git-cheetah-plugin option will provide you some neat menu items, when you right click on items in your git repository when using Windows Explorer GUI.
