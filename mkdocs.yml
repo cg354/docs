@@ -4,6 +4,7 @@ pages:
     - [index.md, 'Home']
     - [setup.md, 'Getting Setup']
 #    - [unix/commands.md, 'Unix', 'Commands']
+    - [git/setup.md, 'Git', 'Setup']
     - [git/commands.md, 'Git', 'Commands']
     - [git/pull-requests.md, 'Git', 'Pull Requests']
     - [git/tutorial.md, 'Git', 'Tutorials']
