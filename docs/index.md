@@ -1,4 +1,4 @@
-# The Complete Guide to IBS574
+# The (Eventual) Complete Guide to IBS574
 Welcome to the complete (or not so complete at the moment!) guide to IBS574! By
 the end of IBS574 we will have covered a number of topics ranging from basic
 UNIX commands to complex bioinformatic algorithms. In order to make life a
