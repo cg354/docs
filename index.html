@@ -48,11 +48,13 @@
                 
                     <ul>
                     
-                        <li class="toctree-l3"><a href="#welcome-to-mkdocs">Welcome to MkDocs</a></li>
+                        <li class="toctree-l3"><a href="#the-complete-guide-to-ibs574">The Complete Guide to IBS574</a></li>
                         
-                            <li><a class="toctree-l4" href="#commands">Commands</a></li>
+                            <li><a class="toctree-l4" href="#driven-by-the-class">Driven by the Class</a></li>
                         
-                            <li><a class="toctree-l4" href="#project-layout">Project layout</a></li>
+                            <li><a class="toctree-l4" href="#stuck-want-more-info-need-a-tutorial">Stuck? Want more info? Need a tutorial?</a></li>
+                        
+                            <li><a class="toctree-l4" href="#submitting-a-request">Submitting a Request</a></li>
                         
                     
                     </ul>
@@ -62,10 +64,18 @@
 
     
         
-            <li class="toctree-l1 ">
-                <a class="" href="git/">Git</a>
-                
-            </li>
+            <span>Git</span>
+            
+                <li class="toctree-l2 ">
+                    <a class="" href="git/commands/">Commands</a>
+                    
+                </li>
+            
+                <li class="toctree-l2 ">
+                    <a class="" href="git/tutorial/">Tutorials</a>
+                    
+                </li>
+            
         
 
     
@@ -102,21 +112,66 @@
 </div>
           <div role="main">
             <div class="section">
-              <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="http://mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+              <h1 id="the-complete-guide-to-ibs574">The Complete Guide to IBS574</h1>
+<p>Welcome to the complete (or not so complete at the moment!) guide to IBS574! By
+the end of IBS574 we will have covered a number of topics ranging from basic
+UNIX commands to complex bioinformatic algorithms. In order to make life a
+little easier for everyone, this site will act as a broad resource of topics
+covered in class.  For example, basic tutorials for SSHing in to the EIGC
+server or turning in your homework through a pull request on Github will be
+available from this site.</p>
+<h2 id="driven-by-the-class">Driven by the Class</h2>
+<p>Probably the best benefit that can come from this guide, is you as a class can
+drive what topics are covered in this guide and even make your own
+contributions! Consider this a social experiment, at a minimum it will include
+topics from class but it really has the potential to grow into a valuable
+resource for not only this class but also future classes.</p>
+<h2 id="stuck-want-more-info-need-a-tutorial">Stuck? Want more info? Need a tutorial?</h2>
+<p>The cool thing about using GitHub is we can use the built in <strong><em>Issues</em></strong>
+system to submit requests for things to be added to this guide. People can
+comment on the requests, offer their opinions, suggest solutions and even add
+those solutions to the guide!</p>
+<h2 id="submitting-a-request">Submitting a Request</h2>
+<p>Let's say you are stuck on a homework question. The question is asking you to
+use pipes to create a string of commands and redirect STDERR to STDOUT. There
+were a few examples of pipes from lecture, but you still have some questions
+and would like some clarification.</p>
+<p>Let's use GitHub to submit a request for a short tutorial! Follow these steps!</p>
+<ol>
+<li>Go to the <a href="https://github.com/IBS574/docs/issues">IBS574 Docs - Issues Page</a></li>
+<li>You should be at a page that looks something like this:
+<img alt="GitHub Issues" src="./img/github-issues.png" /></li>
+<li>
+<p>Is there something like you are requesting already there?</p>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs help</code> - Print this help message.</li>
+<li>
+<p>If yes, let's comment on the request and add anything that might be missing.</p>
+<ol>
+<li>In this case there is already something similar to what we are
+   requesting. Its this one:
+<img alt="GitHub Existing Issue" src="./img/github-existing-issue.png" /></li>
+<li>If you click on the issue it will <a href="https://github.com/IBS574/docs/issues/3">open the details about the issue.</a>
+<img alt="GitHub New Issue" src="./img/github-issue-3.png" /></li>
+<li>Add your comments, and finally click <strong><em>Comment</em></strong>
+<img alt="GitHub Comment On Issue" src="./img/github-issue-comment.png" /></li>
+<li><em>Voila!</em> You are done, emails should have been sent and TAs will take a look!</li>
+</ol>
+</li>
+<li>
+<p>If no, let's create a new request!</p>
+<ol>
+<li>Go to the <a href="https://github.com/IBS574/docs/issues/new">IBS574 Docs - New Issue Page</a>
+<img alt="GitHub New Issue" src="./img/github-new-issue.png" /></li>
+<li>Fill in the details, add lables, finally click <strong><em>Submit new issue</em></strong>
+<img alt="GitHub Create Issue" src="./img/github-create-issue.png" /></li>
+<li><em>Voila!</em> You are done, your request has been added to the list.
+Also, emails should have been sent and TAs will take a look!
+<img alt="GitHub Created Issue" src="./img/github-created-issue.png" /></li>
+</ol>
+</li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
+</li>
+</ol>
 
             </div>
           </div>
@@ -124,7 +179,7 @@ docs/
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="git/" class="btn btn-neutral float-right" title="Git"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="git/commands/" class="btn btn-neutral float-right" title="Commands"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
     </div>
@@ -154,7 +209,7 @@ docs/
             <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
         
       <span><a href="" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="git/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span style="margin-left: 15px"><a href="git/commands/" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 </body>
