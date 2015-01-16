@@ -59,17 +59,6 @@
 
     
         
-            <span>Unix</span>
-            
-                <li class="toctree-l2 ">
-                    <a class="" href="../../unix/commands">Commands</a>
-                    
-                </li>
-            
-        
-
-    
-        
             <span>Git</span>
             
                 <li class="toctree-l2 current">
@@ -79,7 +68,7 @@
                         
                             <li class="toctree-l3"><a href="#git-commands">Git Commands</a></li>
                             
-                                <li><a class="toctree-l4" href="#clone">clone</a></li>
+                                <li><a class="toctree-l4" href="#clone-cd-into-the-repository-folder">clone &amp; cd into the repository folder</a></li>
                             
                                 <li><a class="toctree-l4" href="#status">status</a></li>
                             
@@ -103,23 +92,12 @@
                 </li>
             
                 <li class="toctree-l2 ">
+                    <a class="" href="../pull-requests">Pull Requests</a>
+                    
+                </li>
+            
+                <li class="toctree-l2 ">
                     <a class="" href="../tutorial">Tutorials</a>
-                    
-                </li>
-            
-        
-
-    
-        
-            <span>Python</span>
-            
-                <li class="toctree-l2 ">
-                    <a class="" href="../../python/intro">Introduction</a>
-                    
-                </li>
-            
-                <li class="toctree-l2 ">
-                    <a class="" href="../../python/examples">Examples</a>
                     
                 </li>
             
@@ -161,25 +139,35 @@
             <div class="section">
               <h1 id="git-commands">Git Commands</h1>
 <p>Work in progress!</p>
-<h2 id="clone">clone</h2>
-<pre><code>git clone some_repo
+<p><strong><a href="https://confluence.atlassian.com/display/STASH/Basic+Git+commands">Git Commands</a></strong></p>
+<pre><code> must know "git clone", "git status", "git add", "git commit", "git push" only
+</code></pre>
+<h2 id="clone-cd-into-the-repository-folder">clone &amp; cd into the repository folder</h2>
+<p><em>(make a local copy of the GitHub repository)</em></p>
+<pre><code>git clone some_repo some_folder_path ; cd some_folder_path
 </code></pre>
 <h2 id="status">status</h2>
+<p><em>(check the current state of your local repository)</em></p>
 <pre><code>git status
 </code></pre>
 <h2 id="pull">pull</h2>
+<p><em>(get latest files from the repository sitting on GitHub.com)</em></p>
 <pre><code>git pull
 </code></pre>
 <h2 id="add">add</h2>
+<p><em>(start tracking a file)</em></p>
 <pre><code>git add some_file
 </code></pre>
 <h2 id="rm">rm</h2>
+<p><em>(stop tracking a file)</em></p>
 <pre><code>git rm some_file
 </code></pre>
 <h2 id="commit">commit</h2>
-<pre><code>git commit -m 'your message here!'
+<p><em>(record some changes on your local machine)</em></p>
+<pre><code>git commit some_file -m 'your message here!'
 </code></pre>
 <h2 id="push">push</h2>
+<p><em>(update the GitHub repository with your locally commit'ed changes)</em></p>
 <pre><code>git push
 </code></pre>
 <h2 id="git-config">git config</h2>
@@ -194,10 +182,10 @@ you clone or commit.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../tutorial" class="btn btn-neutral float-right" title="Tutorials"/>Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../pull-requests" class="btn btn-neutral float-right" title="Pull Requests"/>Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../unix/commands" class="btn btn-neutral" title="Commands"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../setup" class="btn btn-neutral" title="Getting Setup"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -225,8 +213,8 @@ you clone or commit.</p>
         
             <a class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
         
-      <span><a href="../../unix/commands" style="color: #fcfcfc;">&laquo; Previous</a></span>
-      <span style="margin-left: 15px"><a href="../tutorial" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../setup" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      <span style="margin-left: 15px"><a href="../pull-requests" style="color: #fcfcfc">Next &raquo;</a></span>
     </span>
 </div>
 </body>
