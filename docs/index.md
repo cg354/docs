@@ -16,7 +16,7 @@ resource for not only this class but also future classes.
 
 ## Stuck? Want more info? Need a tutorial?
 The cool thing about using GitHub is we can use the built in **_Issues_**
-system to submit requests for things to be added to this guide. People can
+system to submit requests for topics to be added to this guide. People can
 comment on the requests, offer their opinions, suggest solutions and even add
 those solutions to the guide!
 
