@@ -3,6 +3,8 @@ repo_url: https://github.com/IBS574/docs
 pages:
     - [index.md, 'Home']
     - [setup.md, 'Getting Setup']
+    - [resources/general.md, 'Resources', 'General Resources']
+    - [resources/specific.md, 'Resources', 'Specific Resources']
 #    - [unix/commands.md, 'Unix', 'Commands']
     - [git/setup.md, 'Git', 'Setup']
     - [git/commands.md, 'Git', 'Commands']
