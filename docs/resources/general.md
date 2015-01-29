@@ -4,7 +4,7 @@ having. Google is your friend! Being able to efficiently use Google will become
 a valuable tool in the world of computational biology.
 
 ## Stack Exchange
-If you have a programming related question are almost certainly going to find
+If you have a programming related question you are almost certainly going to find
 it on [Stack Exchange](http://stackexchange.com/). Stack Exchange is a Q&A
 site. It has a range of categories from Academia to Home Improvement. There
 are a number of categories that will be helpful for this class.
