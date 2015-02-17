@@ -1,0 +1,64 @@
+
+title: "Getting recent co-authors from Pubmed"
+author: "Tim Read"
+date: "January 21, 2015"
+output:
+  html_document: default
+
+
+Trying to solve the problem of generating a non-redundant list of recent coathors for a NSF application COI list.  Inspired by this blogpost from Dave Tang: http://davetang.org/muse/2013/10/31/querying-pubmed-using-r/.
+
+First, open the libraries and load the query (boring)
+
+library("RISmed")
+library("dplyr")
+res <- EUtilsSummary('read td', type='esearch', db='pubmed', mindate='2013', maxdate='2015')
+fetch <- EUtilsGet(res)
+
+
+Now use a for-loop to iteratively merge the first two columns
+
+
+a_list = NULL
+for (i in 1:length(Author(fetch))){
+  if (i == 1) {a_list <- Author(fetch)[[1]][,1:2]}
+  else {
+    a_list <- dplyr::union(a_list,Author(fetch)[[i]][,1:2])
+  }
+}
+
+print(a_list)
+
+Not bad: 106 co-authors in the last two years!.
+
+
+Now I want a plot of all the mentions of my favourite word 'plasmid'
+
+#first how many total articles containing plasmid
+res3 <- EUtilsSummary('plasmid', type='esearch', db='pubmed')
+ 
+summary(res3)
+
+tally <- array()
+x <- 1
+for (i in 1970:2013){
+  Sys.sleep(1)
+  r <- EUtilsSummary('plasmid', type='esearch', db='pubmed', mindate=i, maxdate=i)
+  tally[x] <- QueryCount(r)
+  x <- x + 1
+}
+names(tally) <- 1970:2013
+max(tally)
+
+barplot(tally, las=2, ylim=c(0,max(tally)), main="Number of PubMed articles containing plasmid")
+
+
+
+
+
+Session info
+
+sessionInfo()
+
+
+
