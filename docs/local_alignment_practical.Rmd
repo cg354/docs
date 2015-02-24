@@ -1,0 +1,105 @@
+---
+title: "Local alignment in Biostrings practical"
+author: "Tim Read"
+date: "February 22, 2015"
+output:
+  html_document:
+    theme: spacelab
+    toc: yes
+---
+Inspired by https://a-little-book-of-r-for-bioinformatics.readthedocs.org/en/latest/src/chapter4.html by Avril Coughlin.  I recommend looking through other exercises at this website.
+
+##Learning objectives
+
+* Biostrings package
+* Using R for simulations
+* Empirical p values
+* Useful standard R functions such as sapply() and str()
+
+##Walkthrough 
+
+####Intall Biostrings package 
+(if already installed, skip this)
+```{r, cache = TRUE}
+source("http://bioconductor.org/biocLite.R")
+biocLite("Biostrings")
+```
+```{r}
+library("Biostrings")
+```
+
+First - create a set of random DNA sequences.  This expression looks complicated but break it down into individual function calls so you understand what happened.  How could you adjust the expression to account for different DNA composition bias?
+
+####Random DNA sequences
+```{r}
+set.seed(12345)
+dset <- DNAStringSet(sapply(1:2, function(x) paste(sample(c("A","T","G","C"), 20, replace=T), collapse=""))) # Creates random sample sequences
+```
+
+The 'str' command is very useful it telling you about the variables you have created
+
+####DNAStringSet objects
+```{r}
+str(dset)
+dset
+dset[1]
+dset[2]
+```
+There is a useful function in Biostrings for creating your own substitution matrices.
+
+####Create substitution matrix
+```{r}
+sigma <- nucleotideSubstitutionMatrix(match = 2, mismatch = -1, baseOnly = TRUE)
+sigma # Print out the matrix
+```
+Now test out a pairwise algnment.  Note the "local" option and that you are setting the gap opening and extension penalties (quite high in this case).
+
+####Run a pairwise S-W alignment between two random sequences
+```{r}
+sw_test <- pairwiseAlignment(dset[1],dset[2], substitutionMatrix = sigma, gapOpening = -2, gapExtension = -8, scoreOnly = FALSE, type="local")
+sw_test #print out the result
+```
+if we were performing a S-W test for two short sequences of 20bp, we might be concerned about whether the score we got was statistically significant. One way to get a handle on this empirically would be to see if it was significantly higher than that seen in a population of *random* sequenes.
+
+####Score distribution for 1000 alignments of random sequence
+```{r}
+randScores <- vector()  #initialize results vector as empty
+for (i in 1:1000){
+  #create two random sequences
+  rset <- DNAStringSet(sapply(1:2, function(x) paste(sample(c("A","T","G","C"), 20, replace=T), collapse="")))
+  # run an alignment and collect the score
+  rscore <- pairwiseAlignment(rset[1],rset[2], substitutionMatrix = sigma, gapOpening = -2, gapExtension = -8, scoreOnly = TRUE, type="local")
+  #append to results vector
+  randScores <- append(randScores, rscore)
+}
+randScores  # look at the scores
+```
+
+####Visualize the score distribution
+```{r}
+hist(randScores, col = "blue")
+```
+
+##Questions
+1.  What score is geater than 95% obtained when comparing random sequences?
+2.  What score is geater than 99% obtained when comparing random sequences?
+
+##Exercise
+Take the 25-mer sequences:
+CTCCCACAGCGGTTAGCGGACGAAA
+
+and, 
+
+CTCAAACAGCGGTTAGCGTTTGAAT
+
+Calculate local and global alignments and see if they are significant at P > 0.01
+
+##Further work
+Try rerunning the script but tweak the parameters one at a time, e.g. the random seed, gap opening penalties, sequence length, substitution matrix.
+
+####Session info
+```{r, echo=FALSE}
+sessionInfo()
+```
+
+
