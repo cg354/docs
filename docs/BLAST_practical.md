@@ -1,6 +1,6 @@
 # Learning more about BLAST
 
-BLAST is not just about the NCBI web site. The software can be easily installed on your local machine - see the [BLAST installation guide](http://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download).  Most Bioinformatics servers have BLAST installed on the default path.  If you are adventurous, you can easily start your own an AWS instance as a  BLAST server with a custom database.  
+BLAST is not just about the NCBI web site. The software can be easily installed on your local machine - see the [BLAST installation guide](http://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download).  Most Bioinformatics servers have BLAST installed on the default path.  If you are adventurous, you can easily start your own AWS instance as a  BLAST server with a custom database.  
 
 Using the command line BLAST has some advantages to the web site.  Its easy to make your own databases and its also easy to make some simple but powerful custom analysis pipelines.
 
