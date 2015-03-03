@@ -44,10 +44,10 @@ that.
 ##Data
 I have made sequence data for 4 (out of the more than 1400) samples available on Dropbox.  These data were originally downloaded from NCBI and we have extracted the fastq data.  The data are in zipped folders containing forward and reverse Illumina reads.  Choose one of the four samples to work on.
 
-* [P00134](https://www.dropbox.com/s/rarrucs0bev1lw0/P00134.zip?dl=0)
-* [P00497](https://www.dropbox.com/s/v9rjnqpcy7g0wzz/P00497.zip?dl=0)
-* [P00073](https://www.dropbox.com/s/obwp3o18hu3evzg/P00073.zip?dl=0)
-* [P00070](https://www.dropbox.com/s/jm0z0smmyi5pxbq/P00070.zip?dl=0)
+* https://www.dropbox.com/s/rarrucs0bev1lw0/P00134.zip?dl=0
+* https://www.dropbox.com/s/v9rjnqpcy7g0wzz/P00497.zip?dl=0
+* https://www.dropbox.com/s/obwp3o18hu3evzg/P00073.zip?dl=0
+* https://www.dropbox.com/s/jm0z0smmyi5pxbq/P00070.zip?dl=0
 
 (A side note: the P00134 project actually had two runs, but for simplicity I am not including here the run 
 SRR1748707 which produced less data).  
