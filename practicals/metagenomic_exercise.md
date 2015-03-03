@@ -1,6 +1,6 @@
 # Metagenomic analysis 
 
-2 x 2 hour sessions.
+*2 x 2 hour sessions.*
 
 ##Learning Objectives
 
