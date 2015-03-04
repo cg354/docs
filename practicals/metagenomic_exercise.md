@@ -124,7 +124,7 @@ to youe github synced folder.  The data in the Excel file can be impored as a da
 You will see that the spreadsheet contained, in effect, two tables.  The first 29 columns describe the metadata 
 for each sample (location, GPS, temperature etc).  The rest of the columns describe the percent abundance of 
 taxonomic groups dentified by Metaphlan.  The first thought is that the abundances for each row should add up to 
-100% but instead they add up to about 800% (how can you show this?).  You relaize that this is becasue the 
+100% but instead they add up to about 800% (how can you show this?).  You realize that this is becasue the 
 percentage abundance for each taxonomic rank is shown separately and there are eight taxonomic ranks represented 
 (see below).  In order to compare across samples, we only want to focus on one rank.  Lets pick a genus-level 
 classification.  A typical record looks like this:
@@ -246,8 +246,8 @@ Download to your computer and then load the appropriate GFF3 into the IGV.  You 
 track and select the Expanded view.
 
 Examine the alignments and make some screen-grabs for your report.  Questions to think about include:
-- Is the distribtion of aligned reads is even across the genome?
+- Is the distribtion of aligned reads even across the genome?
 - Are there regions with unusually high or low coverage?  
 - Are there any 'broken' mate-pairs and why might this be happening.  
-- In general, how many SNPs are there betwen the reads and the genome?  
+- In general, are there a large number of SNPs between the individual reads and the genome?  
 - Is there any evidence that the metagenome reads derive from more than one genetically distinct organism?
