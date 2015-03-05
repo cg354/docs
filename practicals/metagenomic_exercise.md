@@ -34,8 +34,13 @@ GitHub site and committing changes (editing is activated by pressing the pencil 
 corner of the screen). The key is to keep the notebook up to date as you generate the data and perform 
 analysis. Then neaten up and write notes at the end.  
 
-Here is a guide to github markdown.  
+Here is a guide to github markdown. 
+
 https://help.github.com/articles/markdown-basics/  
+
+This is an example of how to include an image that is in your github directory.  In this example, the image is stored in a subdirectory of this site called 'images'.
+
+![Sequence quality](/images/per_sequence_quality.png)
 
 You can also copy and paste Markdown from Rstudio and it will look fine (through it will not process 
 code - you need to run through knitr for that). You can also apparently copy in HTML and it will display 
