@@ -110,6 +110,51 @@ You can perform a BLAST search locally against the NCBI non-redundant nucleotide
      
 Here, I have customized the output format to include the *staxids* field, which is the taxonmy ID of the subject match.  See the blastn -help option for details.  
 
+###Anna Knight's solution - using R Bioconductor
+
+First scp the classified data file back to your local machine.  Then use R.
+
+     reads<-read.table("/Users/annaknight/Documents/krak_classified_reads")
+     report<-read.table("/Users/annaknight/Documents/kraken_report", sep="\t", as.is=T)
+     a<-read.table("/Users/annaknight/Documents/kraken_out",sep = "\t", as.is=T)
+     a1<-a[,2:3]
+     a2<-subset(a1, a1$V3==632)
+     a3<-subset(a1, a1$V3==1392)
+     anthrax<-a3
+     pestis<-a2
+     
+     write.csv(reads, file="reads.csv")
+     anthrax2<-anthrax$V2
+     anthrax3<-as.character(anthrax2)
+     pestis2<-as.character(pestis$V2)
+     
+     library("Biostrings")
+     
+     s = readDNAStringSet("/Users/annaknight/Documents/krak_classified_reads")
+     RefSeqID = names(s)
+     tf2<-RefSeqID%in%anthrax2
+     tf3<-s[tf2==T]
+     seqforanthrax<-tf3
+     
+     
+     tf4<-RefSeqID%in%pestis2
+     tf5<-s[tf4==T]
+     seqforpestis<-tf5
+     
+     
+     seqforpestis2<-as.data.frame(seqforpestis)
+     seqforanthrax2<-as.data.frame(seqforanthrax)
+     
+     write.fasta(as.list(seqforpestis2$x), rownames(seqforpestis2), "seqforpestis.fasta", open="w")
+     write.fasta(as.list(seqforanthrax2$x), rownames(seqforanthrax2), "seqforanthrax.fasta", open="w")
+
+Now you will have to move the output anthrax fasta files back to the EIGC server, again using scp.
+
+     blastn -db /home/rpetit/blast-db/nt  -query seqforpestis.fasta  -outfmt "6 stitle qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore staxids" >Blastouputoestis2
+     awk '{print $1,$2}' Blastouputoestis2 | sort | uniq
+     
+     blastn -db /home/rpetit/blast-db/nt  -query seqforanthrax.fasta  -outfmt "6 stitle qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore staxids" >Blastoutputanthrax2
+     awk '{print $1,$2}' Blastoutputanthrax2 | sort | uniq
 
 ##Part III: Munging the data from supplemental data excel spreadsheet using R
 The word *'munge'* appears to have have come into common usage in 
