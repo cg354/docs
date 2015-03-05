@@ -104,6 +104,13 @@ _(Hint: it will be helpful to find the NCBI Taxonomy ID associated with each spe
 kraken\_report file. The fourth column is the taxonomic rank ('S' is for species) and the fiftth column is the NCBI 
 Tax ID)_
 
+You can perform a BLAST search locally against the NCBI non-redundant nucleotide database using the following command
+
+     blastn -db /home/rpetit/blast-db/nt  -query <YOUR QUERY FASTAFILE' -outfmt "6 qseqid sseqid pident length mismatch gapopen qstart qend sstart send evalue bitscore staxids"
+     
+Here, I have customized the output format to include the *staxids* field, which is the taxonmy ID of the subject match.  See the blastn -help option for details.  
+
+
 ##Part III: Munging the data from supplemental data excel spreadsheet using R
 The word *'munge'* appears to have have come into common usage in 
 [Scotland and Northern England in the 1940s-1950s](http://english.stackexchange.com/questions/207936/what-is-the-etymology-of-munge), 
