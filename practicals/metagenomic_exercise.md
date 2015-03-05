@@ -38,9 +38,9 @@ Here is a guide to github markdown.
 
 https://help.github.com/articles/markdown-basics/  
 
-This is an example of how to include an image that is in your github directory.  In this example, the image is stored in a subdirectory of this site called 'images'.
+This is an example of how to include an image that is in your github directory.  In this example, just copy the URL of the image on your github repo.
 
-![Sequence quality](/images/per_sequence_quality.png)
+![Sequence quality](https://github.com/IBS574/docs/blob/master/practicals/images/per_sequence_quality.png)
 
 You can also copy and paste Markdown from Rstudio and it will look fine (through it will not process 
 code - you need to run through knitr for that). You can also apparently copy in HTML and it will display 
