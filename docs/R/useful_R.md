@@ -39,6 +39,6 @@ Example
 	r <- regexpr('##.*',d)
 	regmatches(d,r)
 	[1] "##two"   "##four"  "##six"   "##eight" "##ten"  
-	#gsub does both actions at once and uses *grouping*
-	gsub('##(.*)',"",d)
+	#gsub subs the mach pattern for another pattern, in the case below, a blank space
+	gsub('##.*',"",d)
 	[1] "one"   "three" "five"  "seven" "nine" 
