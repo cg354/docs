@@ -1,6 +1,6 @@
-#Some R functions and features that will help with exercises
+#Some useful R functions and features 
 
-Remember: most solutions to your R problems can be found on the internet
+Remember: most solutions to your R problems can be found on through internet searching
 
 ##TRUE and FALSE evaluate to 1 and 0
 
@@ -12,10 +12,10 @@ Remember: most solutions to your R problems can be found on the internet
 	sum(a > 70)
 	[1] 2
 	
-##colSums gives you the sum of the columns in your dataframe
+##colSums gives you the sum of the columns in your matrix or dataframe
 
 	#in this example
-	#make random vector and put it in a 4 x 25 matrix and find the sums of the columns of the datframe
+	#make random vector and put it in a 4 x 25 matrix and find the sums of the columns 
 	set.seed(123)
 	b <- rnorm(100)
 	c <- matrix(b, nrow = 25, ncol =4)
@@ -24,7 +24,7 @@ Remember: most solutions to your R problems can be found on the internet
 	
 ##Regular expressions
 
-R regular expressions allow you to pull patterns from text. See the documentation for specifics.  Here is a guide.
+R regular expressions allow you to pull patterns from text. See the documentation for specifics but here is an overview.
 
 http://www.stat.berkeley.edu/~nolan/stat133/Fall05/lectures/RegEx.html
 
